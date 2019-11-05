@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        //面向对象:
+        //将具有相同特征特性的代码，抽离出来归为一类，然后把描述这个类的细节特性（属性、方法）挂在这个类的原型下的一种编程方式。
+
+        类
+        function Person(name, age, sex) {
+            let obj = {}
+            obj.name = name;
+            obj.age = age;
+            obj.sex = sex;
+            return obj;
+        }
+        let p1 =new Person('赵炎',24,'男')
+        console.log(p1);
+
+        //构造函数
+        function Person(name,age,sex)
+        {
+          //let obj={}   this {}
+          this.name = name;
+          this.age = age;
+          this.sex = sex;
+          this.say = function(){
+          alert('我叫'+this.name);
+        }
+
+        }
+        console.dir(Person)
+
+
+        let p1 = new Person('赵炎',24,'男');  //p1实例
+        let p2 = new Person('冉德鹏',118,'男');//p2实例
+
+        // console.log(p1.say())
+        // console.log(p2.say())
+        // p1.say()
+        // p2.say()
+
+        let ary1 = [];
+        let ary2 = [];
+      console.log(ary1.push == ary2.push);
+
+    </script> -->
+
+    <script>
+    
+    //猫类 构造函数
+    
+    function Cat(name){
+       
+        this.name = name;
+        this.foot = '4只';
+        this.body = '小';
+        this.weiba = true;
+        this.mao = '毛';
+        this.zhuazi = '小爪子';
+    }
+
+        Cat.prototype.say=function(){
+            alert('喵喵');  
+    }
+
+   let kitty=new Cat('kitty')
+   
+   console.log(kitty.say())
+   //实例有原型链，函数有原型，原型又是一个对象，对象它就是实例
+   //实例又有原型链，找到构造函数的原型，Object.prototype.__proto__ = null
+   Object.prototype.skill=8
+   console.log(kitty.skill)
+   console.dir(kitty)
+   console.dir(Cat)
+
+    // Cat.prototype.skill = function(){
+    //     alert('抓老鼠');
+    // }
+    // console.log(kitty.skill())
+
+    // console.log(Object.prototype.__proto__);
+
+    
+
+    
+    </script>
+</body>
+
+</html>
